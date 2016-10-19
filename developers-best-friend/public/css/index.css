@@ -1,0 +1,15 @@
+.function-link a {
+	font-size: 10vw;
+	color: #9d9d9d;
+}
+
+.function-link a:hover {
+	color: #bcbcbc;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.function-link :hover {
+	background-color: rgba(255,255,255,.02);
+	border-radius: 30%;
+}
