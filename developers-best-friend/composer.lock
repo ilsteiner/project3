@@ -4,9 +4,52 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b2a020c133d08f6d2778a143bb2d20ea",
-    "content-hash": "be4e522dced05d8d7c15e8a3322aef01",
+    "hash": "33f90b48c7978f93d4c788ba90ad4e16",
+    "content-hash": "5a82542f42c767fa1515afb454e3644f",
     "packages": [
+        {
+            "name": "badcow/lorem-ipsum",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Badcow/LoremIpsum.git",
+                "reference": "7e685497e92d71d0ebbd067d51892f3308cc72e1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Badcow/LoremIpsum/zipball/7e685497e92d71d0ebbd067d51892f3308cc72e1",
+                "reference": "7e685497e92d71d0ebbd067d51892f3308cc72e1",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.9"
+            },
+            "suggest": {
+                "twig/twig": "Twig is a template language for PHP, released under the new BSD license (code and documentation)."
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Badcow\\LoremIpsum\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sam Williams",
+                    "email": "sam@badcow.co"
+                },
+                {
+                    "name": "Mathew Tinsley",
+                    "email": "tinsley@tinsology.net"
+                }
+            ],
+            "description": "Lorem ipsum generator.",
+            "time": "2015-04-10 00:15:43"
+        },
         {
             "name": "barryvdh/laravel-debugbar",
             "version": "v2.3.0",
@@ -490,16 +533,16 @@
         },
         {
             "name": "league/flysystem",
-            "version": "1.0.31",
+            "version": "1.0.32",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "521a233642773505222a5dd53231ccf5b0607d5a"
+                "reference": "1b5c4a0031697f46e779a9d1b309c2e1b24daeab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/521a233642773505222a5dd53231ccf5b0607d5a",
-                "reference": "521a233642773505222a5dd53231ccf5b0607d5a",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/1b5c4a0031697f46e779a9d1b309c2e1b24daeab",
+                "reference": "1b5c4a0031697f46e779a9d1b309c2e1b24daeab",
                 "shasum": ""
             },
             "require": {
@@ -569,77 +612,7 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2016-10-19 13:15:54"
-        },
-        {
-            "name": "magyarjeti/laravel-lipsum",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/magyarjeti/laravel-lipsum.git",
-                "reference": "defb47d4931cd6ba724e0f62e037c5c463e12431"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/magyarjeti/laravel-lipsum/zipball/defb47d4931cd6ba724e0f62e037c5c463e12431",
-                "reference": "defb47d4931cd6ba724e0f62e037c5c463e12431",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/support": ">=4.0",
-                "magyarjeti/loripsum-client": "v2.0",
-                "php": ">=5.3.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Magyarjeti\\LaravelLipsum": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "description": "Lorem ipsum generator for Laravel Framework",
-            "time": "2015-02-09 13:54:32"
-        },
-        {
-            "name": "magyarjeti/loripsum-client",
-            "version": "v2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/magyarjeti/loripsum-client.git",
-                "reference": "ce686fb76ee41baeb65fb8c9474dbbad7e54a03e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/magyarjeti/loripsum-client/zipball/ce686fb76ee41baeb65fb8c9474dbbad7e54a03e",
-                "reference": "ce686fb76ee41baeb65fb8c9474dbbad7e54a03e",
-                "shasum": ""
-            },
-            "require": {
-                "ext-curl": "*"
-            },
-            "require-dev": {
-                "mockery/mockery": "0.9.2",
-                "phpunit/phpunit": "4.3.1",
-                "squizlabs/php_codesniffer": "2.0.0RC2"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Magyarjeti\\Loripsum": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Lorem ipsum generator.",
-            "keywords": [
-                "ipsum",
-                "lipsum",
-                "lorem",
-                "loripsum"
-            ],
-            "time": "2014-10-09 15:07:00"
+            "time": "2016-10-19 20:38:46"
         },
         {
             "name": "maximebf/debugbar",
@@ -3626,7 +3599,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "magyarjeti/laravel-lipsum": 20
+        "badcow/lorem-ipsum": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

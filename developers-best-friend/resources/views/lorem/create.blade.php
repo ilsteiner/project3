@@ -1,6 +1,10 @@
 @extends('layouts.master')
 @extends('layouts.lorem')
 
+@section('head')
+<link rel="stylesheet" type="text/css" href="css/lorem.css">
+@stop
+
 @section('content')
 <form action="/lorem" method="POST">
 	{{ csrf_field() }}
@@ -9,9 +13,9 @@
 			<div class="col-xs-12">
 				<div class="input-group input-group-lg">
 			      <span class="input-group-btn">
-			        <button class="btn dark btn-secondary" name="loremType" value="list" type="submit">Generate a list!</button>
+			        <button class="btn dark btn-secondary" name="loremType" value="sentences" type="submit">Generate sentences!</button>
 			      </span>
-			      <input type="number" name="count" class="form-control dark" placeholder="How many should we generate?">
+			      <input type="number" name="count" class="form-control dark" placeholder="How much Lorem?">
 			      <span class="input-group-btn">
 			        <button class="btn dark btn-secondary" name="loremType" value="paragraphs" type="submit">Generate paragraphs!</button>
 			      </span>
@@ -32,6 +36,17 @@
 		@endforeach
 		</div>
 		@endif
-	</div>
 </form>
+
+	@if(! empty($lorem))
+		<div class="row">
+			@foreach ($lorem as $loremItem)
+				<div class="col-md-12 lorem-block">
+					{{ $loremItem }}
+				</div>
+			@endforeach
+		</div>
+	@endif
+	</div>
 @stop
+

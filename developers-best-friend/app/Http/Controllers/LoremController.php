@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use dbf\Http\Requests;
 
+use Badcow\LoremIpsum;
+
 class LoremController extends Controller
 {
     public function create() {
@@ -16,21 +18,22 @@ class LoremController extends Controller
     	# Validation
     	$this->validate($request,
     		['count' => "required|numeric|min:1|max:50",
-    		'loremType' => "required|in:list,paragraphs",]
+    		'loremType' => "required|in:sentences,paragraphs",]
     		);
 
     	$loremType = $request->input('loremType');
     	$count = $request->input('count');
 
+    	$loremGen = new \Badcow\LoremIpsum\Generator();
     	$lorem = "";
 
-    	if($loremType == "paragraphs") {
-    		Lipsum::medium($count);
+    	if($loremType == "sentences") {
+    		$lorem = $loremGen->getSentences($count);
     	}
-    	if($loremType == "list") {
-    		Lipsum::ul()->medium($count);
+    	if($loremType == "paragraphs") {
+    		$lorem = $loremGen->getParagraphs($count);
     	}
 
-    	return view('lorem.store');
+    	return view('lorem.create')->with('lorem', $lorem);
     }
 }
