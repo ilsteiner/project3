@@ -4,12 +4,7 @@
 }
 
 .function-link a:hover {
-	color: #bcbcbc;
+	color: #DDDDDD;
 	text-decoration: none;
 	cursor: pointer;
-}
-
-.function-link :hover {
-	background-color: rgba(255,255,255,.02);
-	border-radius: 30%;
 }
