@@ -12,7 +12,7 @@
 		<div class="row">
 			<div class="col-md-3">
 				<div class="form-group">	
-					<input type="number" name="count" class="form-control dark" placeholder="How many users?">
+					<input type="number" name="count" class="form-control dark text" placeholder="How many users?">
 				</div>
 			</div>
 

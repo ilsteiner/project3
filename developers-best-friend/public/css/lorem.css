@@ -1,11 +1,3 @@
-input.form-control.dark {
-	text-align: center;
-	color: #bcbcbc;
-	background-color: #282828;
-	border-color: #282828;
-	font-size: 2vw;
-}
-
 .lorem-block {
 	font-size: 1.2em;
 	padding-top: 15px;
@@ -21,4 +13,12 @@ div.lorem-block::selection {
 div.lorem-block::-moz-selection {
 	background: #DDDDDD;
 	color: #111111;
+}
+
+input.form-control.dark {
+	text-align: center;
+	color: #bcbcbc;
+	background-color: #282828;
+	border-color: #282828;
+	font-size: 2vw;
 }
