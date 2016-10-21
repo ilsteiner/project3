@@ -1,0 +1,50 @@
+label {
+  font-size: 2vw;
+}
+
+label :hover {
+  cursor: pointer;
+}
+
+label.radio-inline.radio {
+  padding: 0;
+}
+
+.radio-inline input {
+  display: none;
+}
+
+.radio-inline input:checked + span {
+  color: #5cb85c;
+}
+
+button.dark {
+  margin-top: 15px;
+}
+
+.user-label {
+  font-weight: bold;
+}
+
+.user-well {
+  background-color: #333333;
+  border-color: black;
+  font-size: 1.3em;
+}
+
+.name {
+  font-size: 1.5em;
+}
+
+.avatar {
+  height: 50px;
+}
+
+input.form-control.dark.text {
+  text-align: center;
+  color: #bcbcbc;
+  background-color: #282828;
+  border-color: #282828;
+  font-size: 1.5vw;
+  height: 50px;
+}
