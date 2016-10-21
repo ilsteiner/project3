@@ -6,16 +6,6 @@ input.form-control.dark {
 	font-size: 2vw;
 }
 
-button.dark {
-	background-color: #333333;
-	font-size: 1vw;
-}
-
-button.dark:hover {
-	background-color: #444444;
-	color: #DDDDDD;
-}
-
 .lorem-block {
 	font-size: 1.2em;
 	padding-top: 15px;

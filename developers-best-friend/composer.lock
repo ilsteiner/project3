@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "68567dd6d2e6092ecd621368b9da52db",
-    "content-hash": "18536db85e9a06b3fd2fed8d003785e1",
+    "hash": "8f5ced0a882cadaf1d47e98273cf99f1",
+    "content-hash": "bdd89ca6ce066fbdfe41648f45df1175",
     "packages": [
         {
             "name": "badcow/lorem-ipsum",
@@ -360,6 +360,47 @@
                 "uri"
             ],
             "time": "2016-06-24 23:00:38"
+        },
+        {
+            "name": "hackzilla/password-generator",
+            "version": "1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hackzilla/password-generator.git",
+                "reference": "a85b083e4116eb29f53c28b5bf3857283f9ead21"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hackzilla/password-generator/zipball/a85b083e4116eb29f53c28b5bf3857283f9ead21",
+                "reference": "a85b083e4116eb29f53c28b5bf3857283f9ead21",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "satooshi/php-coveralls": "dev-master|^1.0",
+                "sllh/php-cs-fixer-styleci-bridge": "^2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Hackzilla\\PasswordGenerator\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Daniel Platt",
+                    "email": "github@ofdan.co.uk",
+                    "homepage": "http://www.hackzilla.org"
+                }
+            ],
+            "description": "Password Generator Library",
+            "time": "2016-07-24 15:43:52"
         },
         {
             "name": "intervention/image",
@@ -1059,55 +1100,6 @@
                 "php"
             ],
             "time": "2016-09-16 12:04:44"
-        },
-        {
-            "name": "nubs/random-name-generator",
-            "version": "v2.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/nubs/random-name-generator.git",
-                "reference": "acc58322b8792ff2599747cc8dc773d3a8547874"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/nubs/random-name-generator/zipball/acc58322b8792ff2599747cc8dc773d3a8547874",
-                "reference": "acc58322b8792ff2599747cc8dc773d3a8547874",
-                "shasum": ""
-            },
-            "require": {
-                "php": "~5.6 || ~7.0"
-            },
-            "require-dev": {
-                "cinam/randomizer": ">=1.1.1,<2.0",
-                "phpunit/phpunit": "~5.0",
-                "satooshi/php-coveralls": "~1.0",
-                "squizlabs/php_codesniffer": "~2.3"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Nubs\\RandomNameGenerator\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Spencer Rinehart",
-                    "email": "anubis@overthemonkey.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "A library to create interesting, sometimes entertaining, random names.",
-            "keywords": [
-                "alliteration",
-                "generator",
-                "random",
-                "video game"
-            ],
-            "time": "2016-09-15 01:59:34"
         },
         {
             "name": "paragonie/random_compat",

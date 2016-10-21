@@ -8,6 +8,10 @@ use dbf\Http\Requests;
 
 use VJoao\LetterAvatar\LetterAvatar;
 
+use Hackzilla\PasswordGenerator\Generator\ComputerPasswordGenerator;
+
+use Rych\Random;
+
 class UserController extends Controller
 {
 	public function create() {
@@ -18,52 +22,41 @@ class UserController extends Controller
     	# Validation
     	$this->validate($request,
     		['count' => "required|numeric|min:1|max:500",
-    		'userType' => "required|in:human,animal,video",
     		'sex' => "required|in:male,female,both",]
     		);
 
     	$count = $request->input('count');
-    	$userType = $request->input('userType');
     	$sex = $request->input('sex');
-    	$options[] = $request->input('options[]');
+    	$optionsField = $request->input('options');
+    	$options = [];
+    	foreach ($optionsField as $option => $optionValue) {
+    		$options[$optionValue] = true;
+    	}
+    	// $options[] = $request->get('options');
 
     	$users = [];
 
     	for($i = 0; $i < $count; $i++) {
-    		$name = getName($userType,$sex);
-    		$birthday = (isset($options["birthday"]) ? getBirthday() : NULL);
-    		$age = ($birthday ? getAge($birthday) : NULL);
-    		$users = 
+    		$name = $this->getName($sex);
+    		$birthday = (isset($options["birthday"]) ? $this->getBirthday() : NULL);
+    		$age = (isset($options["age"]) ? $this->getAge($birthday) : NULL);
+    		$users[$name] =
     		[
     		"name" => $name,
-    		"sex" => $sex,
-    		"agent" => (isset($options["agent"]) ? getAgent() : NULL),
-    		"avatar" => (isset($options["avatar"]) ? getAvatar($name) : NULL),
+    		"agent" => (isset($options["agent"]) ? $this->getAgent() : NULL),
+    		"avatar" => (isset($options["avatar"]) ? $this->getAvatar($name) : NULL),
     		"birthday" => $birthday,
     		"age" => $age,
-    		"username" => (isset($options["username"]) ? getUsername($name) : NULL),
-    		"password" => (isset($options["password"]) ? getPassword() : NULL)
+    		"username" => (isset($options["username"]) ? $this->getUsername($name) : NULL),
+    		"password" => (isset($options["password"]) ? $this->getPassword() : NULL)
     		];
     	}
 
-    	return view('user.store')->with('users', $count);
+    	return view('user.store')->with('users', $users);
     }
 
-    private function getName($userType,$sex='both') {
-    	switch ($userType) {
-    		case 'human':
-    			return humanName($sex);
-    		case 'animal':
-    			return animalName();
-    		case 'video':
-    			return videoGameName();
-    		default:
-    			return humanName($sex);
-    	}
-    }
-
-    private function humanName($sex) {
-    	$fileDir = "/resources/names/";
+    private function getName($sex='both') {
+    	$fileDir = "../resources/names/";
     	$firstNames;
     	switch ($sex) {
     		case 'male':
@@ -93,17 +86,7 @@ class UserController extends Controller
     	$lastNames = file($fileDir . "lastNames.txt");
     	$lastName = $lastNames[array_rand($lastNames)];
 
-    	return $firstName . " " . $lastName;
-    }
-
-    private function animalName() {
-    	$generator = \nubs\RandomNameGenerator\Alliteration();
-    	return $generator->getName();
-    }
-
-    private function videoGameName() {
-    	$generator = \nubs\RandomNameGenerator\Vgng();
-    	return $generator->getName();
+    	return str_replace(array("\n\r", "\n", "\r"), "", $firstName . " " . $lastName);   	
     }
 
     private function getAgent() {
@@ -115,23 +98,30 @@ class UserController extends Controller
     }
 
     private function getBirthday() {
-    	$randGen = new Rych\Random\Random();
     	//Random UNIX timestamp between 1916 and 2003
-    	$unixStamp = $randGen->getRandomInteger(-1704153600,1072828800);
+    	$unixStamp = rand(-1704153600,1072828800);
     	return date("m/d/Y",$unixStamp);
     }
 
     private function getAge($birthday) {
-    	$birthdayDate = strtotime($birthday);
-    	$ageStamp = time() - $birthdayDate;
-    	return date("m/d/Y",$ageStamp);
+    	$birthdayDate = date_create((is_null($birthday) ? $this->getBirthday() : $birthday));
+    	return date_diff($birthdayDate, date_create('today'))->y;
     }
 
     private function getUsername($name) {
-
+    	return strtolower(substr($name,0,3) . substr($name,-1,4));
     }
 
     private function getPassword() {
+    	$passGen = new ComputerPasswordGenerator();
 
+		$passGen
+		  ->setOptionValue(ComputerPasswordGenerator::OPTION_UPPER_CASE, true)
+		  ->setOptionValue(ComputerPasswordGenerator::OPTION_LOWER_CASE, true)
+		  ->setOptionValue(ComputerPasswordGenerator::OPTION_NUMBERS, true)
+		  ->setOptionValue(ComputerPasswordGenerator::OPTION_SYMBOLS, true)
+		;
+
+		return $passGen->generatePassword();
     }
 }

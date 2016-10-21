@@ -9,14 +9,12 @@
 	<header>
 		<nav id="dbf-menu" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		    <div class="container-fluid">
-		        <div class="navbar-header" id="navbar-header"><a class="navbar-brand" href="#">Developer&#x27;s Best Friend</a>
+		        <div class="navbar-header" id="navbar-header"><a class="navbar-brand" href="/">Developer&#x27;s Best Friend</a>
 		            <button type="button" class="navbar-toggle" data-toggle="collapse"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
 		            </button>
 		        </div>
 		        <div class="collapse navbar-collapse">
 		            <ul class="nav navbar-nav navbar-left">
-		                <!-- <li><a href="/">Home</a>
-		                </li> -->
 		                <li><a href="/lorem">Lorem</a>
 		                </li>
 		                <li><a href="/user">User Generator</a>

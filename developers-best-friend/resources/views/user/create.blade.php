@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('head')
-{{-- <link rel="stylesheet" type="text/css" href="css/user.css"> --}}
+<link rel="stylesheet" type="text/css" href="css/user.css">
 <link rel="stylesheet" type="text/css" href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css">
 @stop
 
@@ -15,51 +15,26 @@
 					<input type="number" name="count" class="form-control dark" placeholder="How many users?">
 				</div>
 			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-6">
-				<div class="radio">
-					<label class="radio inline">
-						<input type="radio" id="human" name="userType" class="form-control dark" value="human" checked>
-						Human name
-					</label>
-				</div>
 
-				<div class="radio">
-					<label class="radio inline">
-						<input type="radio" id="animal" name="userType" class="form-control dark" value="animal">
-						Animal name
-					</label>
-				</div>
-
-				<div class="radio">
-					<label class="radio inline">
-						<input type="radio" id="video" name="userType" class="form-control dark" value="video">
-						Video game name
-					</label>
-				</div>
-			</div>
 			<div class="col-md-3">
-				<div class="radio">
-					<label class="radio inline">
-						<input type="radio" id="male" name="sex" class="form-control dark" value="male">
-						Male
-					</label>
-				</div>
+				<label class="radio radio-inline">
+					<input type="radio" id="male" name="sex" value="male">
+					<span>Male</span>
+				</label>
+			</div>
 
-				<div class="radio">
-					<label class="radio inline">
-						<input type="radio" id="female" name="sex" class="form-control dark" value="female">
-						Female
-					</label>
-				</div>
+			<div class="col-md-3">
+				<label class="radio radio-inline">
+					<input type="radio" id="female" name="sex" value="female">
+					<span>Female</span>
+				</label>
+			</div>
 
-				<div class="radio">
-					<label class="radio inline">
-						<input type="radio" id="both" name="sex" class="form-control dark" value="both" checked>
-						Both
-					</label>
-				</div>
+			<div class="col-md-3">
+				<label class="radio radio-inline">
+					<input type="radio" id="both" name="sex" value="both" checked>
+					<span>Both</span>
+				</label>
 			</div>
 		</div>
 		<div class="row">
@@ -121,7 +96,7 @@
 		@endif
 		<div class="row">
 			<div class="col-md-12">
-				<button type="submit" class="btn btn-block">Get users!</button>
+				<button type="submit" class="btn btn-block dark">Get users!</button>
 			</div>
 		</div>
 	</div>

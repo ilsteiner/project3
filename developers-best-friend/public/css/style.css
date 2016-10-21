@@ -3,3 +3,13 @@ body {
 	background-color: #111111;
 	color: #BBBBBB;
 }
+
+button.dark {
+	background-color: #333333;
+	font-size: 1vw;
+}
+
+button.dark:hover {
+	background-color: #444444;
+	color: #DDDDDD;
+}
