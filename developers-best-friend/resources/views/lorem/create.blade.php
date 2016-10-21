@@ -1,5 +1,4 @@
 @extends('layouts.master')
-@extends('layouts.lorem')
 
 @section('head')
 <link rel="stylesheet" type="text/css" href="css/lorem.css">
@@ -23,7 +22,7 @@
 			</div>
 		</div>
 
-		@if(count($errors) > 0)
+		@if(!empty($errors))
 		<div class="row">
 		@foreach ($errors->all() as $error)
 			<div class="col-xs-12">
@@ -38,7 +37,7 @@
 		@endif
 </form>
 
-	@if(! empty($lorem))
+	@if(!empty($lorem))
 		<div class="row">
 			@foreach ($lorem as $loremItem)
 				<div class="col-md-12 lorem-block">

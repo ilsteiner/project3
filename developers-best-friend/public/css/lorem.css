@@ -1,0 +1,34 @@
+input.form-control.dark {
+	text-align: center;
+	color: #bcbcbc;
+	background-color: #282828;
+	border-color: #282828;
+	font-size: 2vw;
+}
+
+button.dark {
+	background-color: #333333;
+	font-size: 1vw;
+}
+
+button.dark:hover {
+	background-color: #444444;
+	color: #DDDDDD;
+}
+
+.lorem-block {
+	font-size: 1.2em;
+	padding-top: 15px;
+	line-height: 1.5;
+	letter-spacing: .8;
+}
+
+div.lorem-block::selection {
+	background: #DDDDDD;
+	color: #111111;
+}
+
+div.lorem-block::-moz-selection {
+	background: #DDDDDD;
+	color: #111111;
+}
