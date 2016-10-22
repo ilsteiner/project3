@@ -41,21 +41,16 @@ class UserController extends Controller
     		$birthday = (isset($options["birthday"]) ? $this->getBirthday() : NULL);
     		$age = (isset($options["age"]) ? $this->getAge($birthday) : NULL);
 
-            try {
-        		$users[$name] =
-        		[
-        		"name" => $name,
-        		"agent" => (isset($options["agent"]) ? $this->getAgent() : NULL),
-        		"avatar" => (isset($options["avatar"]) ? $this->getAvatar($name) : NULL),
-        		"birthday" => $birthday,
-        		"age" => $age,
-        		"username" => (isset($options["username"]) ? $this->getUsername($name) : NULL),
-        		"password" => (isset($options["password"]) ? $this->getPassword() : NULL)
-        		];
-            }
-            catch (Exception $e) {
-                echo 'There was an exception! Message reads: ', $e.getMessage(), "\n";
-            }
+    		$users[$name] =
+    		[
+    		"name" => $name,
+    		"agent" => (isset($options["agent"]) ? $this->getAgent() : NULL),
+    		"avatar" => (isset($options["avatar"]) ? $this->getAvatar($name) : NULL),
+    		"birthday" => $birthday,
+    		"age" => $age,
+    		"username" => (isset($options["username"]) ? $this->getUsername($name) : NULL),
+    		"password" => (isset($options["password"]) ? $this->getPassword() : NULL)
+    		];
     	}
 
     	return view('user.store')->with('users', $users);
