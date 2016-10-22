@@ -45,12 +45,12 @@
 						User agent
 					</label>
 				</div>
-				{{-- <div class="checkbox">
+				<div class="checkbox disabled">
 					<label class="checkbox inline">
-						<input type="checkbox" data-toggle="toggle" data-on="Include" data-off="Exclude" data-onstyle="success" class="form-control dark" name="options[]" value="avatar">
+						<input disabled type="checkbox" data-toggle="toggle" data-on="Include" data-off="Exclude" data-onstyle="success" class="form-control dark" name="options[]" value="avatar">
 						Avatar
 					</label>
-				</div> --}}
+				</div>
 				<div class="checkbox">
 					<label class="checkbox inline">
 						<input type="checkbox" data-toggle="toggle" data-on="Include" data-off="Exclude" data-onstyle="success" class="form-control dark" name="options[]" value="birthday">
