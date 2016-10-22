@@ -95,7 +95,8 @@ class UserController extends Controller
     }
 
     private function getAvatar($name) {
-    	return new LetterAvatar($name);
+        echo new LetterAvatar($name);
+    	return "";
     }
 
     private function getBirthday() {
