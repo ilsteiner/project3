@@ -12,7 +12,14 @@
 				<div class="row">
 					@if($user["avatar"])
 						<div class="col-md-2">
-							<img class="avatar" src="{{ $user["avatar"] }}">
+							<img class="avatar" src="{{ 
+								try {
+								$user["avatar"] }
+								catch (Exception e) {
+									echo 'There was an exception! Message reads: ', $e.getMessage(), "\n";
+								}
+								 }}">
+								}
 						</div>
 					@endif
 
