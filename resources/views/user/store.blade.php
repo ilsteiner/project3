@@ -12,7 +12,7 @@
 				<div class="row">
 					@if($user["avatar"])
 						<div class="col-md-2">
-							<img class="avatar" src="{{ dd($user["avatar"]) }}">
+							<img class="avatar" src="{{ $user["avatar"] }}">
 						</div>
 					@endif
 
