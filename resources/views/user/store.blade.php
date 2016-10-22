@@ -10,11 +10,11 @@
 		<div class="col-md-6">
 			<div class="well well-lg user-well">
 				<div class="row">
-					@if($user["avatar"])
+					{{-- @if($user["avatar"])
 						<div class="col-md-2">
 							<img class="avatar" src="{{ $user["avatar"] }}">
 						</div>
-					@endif
+					@endif --}}
 
 					<div class="name col-md-10">
 						{{ $user["name"] }}

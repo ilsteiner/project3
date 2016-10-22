@@ -94,9 +94,9 @@ class UserController extends Controller
     	return \Campo\UserAgent::random();
     }
 
-    private function getAvatar($name) {
-    	return new LetterAvatar($name);
-    }
+    // private function getAvatar($name) {
+    // 	return new LetterAvatar($name);
+    // }
 
     private function getBirthday() {
     	//Random UNIX timestamp between 1916 and 2003
