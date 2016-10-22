@@ -81,6 +81,12 @@
 			</div>
 		</div>
 
+		<div class="row">
+			<div class="col-md-12">
+				<button type="submit" class="btn btn-block dark">Get users!</button>
+			</div>
+		</div>
+
 		@if(!empty($errors))
 		<div class="row">
 		@foreach ($errors->all() as $error)
@@ -94,11 +100,6 @@
 		@endforeach
 		</div>
 		@endif
-		<div class="row">
-			<div class="col-md-12">
-				<button type="submit" class="btn btn-block dark">Get users!</button>
-			</div>
-		</div>
 	</div>
 </form>
 @stop
