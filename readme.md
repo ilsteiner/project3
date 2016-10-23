@@ -1,27 +1,15 @@
-# Laravel PHP Framework
-
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
-
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
-
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
-
-## Official Documentation
-
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+# Developer's Best Friend
+## Live URL
+<http://p3.lsteiner.us>
+## Description
+This application provides two tools to that are of use to web developers. The first is a Lorem Ipsum generator to provide Lorem Ipsum filler text. The second is a user generator that provides names and other information associated with fictional users.
+## Demo
+<http://www.youtube.com>
+## Outside code
+1. [Letter Avatar](https://packagist.org/packages/vjoao/letter-avatar)
+  * This is not in the live version because there was some sort of environment issue I couldn't figure out. It works locally but not remotely...I'm not sure why. The __toString method eats any exception that might be thrown.
+2. [Laravel](https://github.com/laravel) (of course)
+3. [Password Generator](https://packagist.org/packages/hackzilla/password-generator)
+4. [Random User Agent](https://packagist.org/packages/campo/random-user-agent)
+5. [Debug Bar](https://github.com/barryvdh/laravel-debugbar)
+6. [Lorem Ipsum Generator](https://packagist.org/packages/badcow/lorem-ipsum)

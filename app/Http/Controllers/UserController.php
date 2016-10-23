@@ -10,8 +10,6 @@ use VJoao\LetterAvatar\LetterAvatar;
 
 use Hackzilla\PasswordGenerator\Generator\ComputerPasswordGenerator;
 
-use Rych\Random;
-
 class UserController extends Controller
 {
 	public function create() {
@@ -27,12 +25,12 @@ class UserController extends Controller
 
     	$count = $request->input('count');
     	$sex = $request->input('sex');
+
     	$optionsField = $request->input('options');
     	$options = [];
     	foreach ($optionsField as $option => $optionValue) {
     		$options[$optionValue] = true;
     	}
-    	// $options[] = $request->get('options');
 
     	$users = [];
 
