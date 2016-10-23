@@ -13,3 +13,5 @@ This application provides two tools to that are of use to web developers. The fi
 4. [Random User Agent](https://packagist.org/packages/campo/random-user-agent)
 5. [Debug Bar](https://github.com/barryvdh/laravel-debugbar)
 6. [Lorem Ipsum Generator](https://packagist.org/packages/badcow/lorem-ipsum)
+7. [Bootstrap](http://getbootstrap.com/)
+8. [Bootstrap Toggle](http://www.bootstraptoggle.com/)
