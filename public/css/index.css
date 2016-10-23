@@ -3,7 +3,7 @@
 	color: #9d9d9d;
 }
 
-.function-link a:hover {
+.function-link a:hover, .function-link a:active {
 	color: #DDDDDD;
 	text-decoration: none;
 	cursor: pointer;
