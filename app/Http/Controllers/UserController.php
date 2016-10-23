@@ -28,9 +28,13 @@ class UserController extends Controller
 
     	$optionsField = $request->input('options');
     	$options = [];
-    	foreach ($optionsField as $option => $optionValue) {
-    		$options[$optionValue] = true;
-    	}
+
+        if($optionsField){
+            foreach ($optionsField as $option => $optionValue) {
+                $options[$optionValue] = true;
+            }
+        }
+
 
     	$users = [];
 
