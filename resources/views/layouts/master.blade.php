@@ -7,6 +7,7 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		@yield('head')
 	</head>
+	<body>
 	<header>
 		<nav id="dbf-menu" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		    <div class="container-fluid">
@@ -26,7 +27,6 @@
 		</nav>
 	</header>
 
-	<body>
 		@yield('content')
 	</body>
 
