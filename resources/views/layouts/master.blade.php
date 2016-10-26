@@ -27,11 +27,12 @@
 		</nav>
 	</header>
 
-		@yield('content')
-	</body>
+	@yield('content')
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
 
 	@yield('body')
+
+	</body>
 </html>
